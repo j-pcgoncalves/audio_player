@@ -52,6 +52,7 @@ const pauseSong = () => {
 // Play or Pause Event Listener
 playBtn.addEventListener('click', () => isPlaying ? pauseSong() : playSong());
 
+
 // Update DOM
 const loadSong = song => {
     title.textContent = song.displayName;
@@ -59,3 +60,12 @@ const loadSong = song => {
     music.src = `music/${song.name}.mp3`;
     image.src = `img/${song.name}.jpg`;
 }
+
+
+
+// On Load - Select First Song
+loadSong(songs[0]);
+
+// Event Listeners
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
