@@ -1,5 +1,7 @@
 /* Images created by: https://unsplash.com/@pawel_czerwinski */
 
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -11,17 +13,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: League Spartan, sans-serif;
   font-size: 12px;
 }
-
-
 
 .img-container {
   position: relative;
   top: -50px;
   left: 50px;
 }
-
 
 h2 {
   font-size: 25px;
