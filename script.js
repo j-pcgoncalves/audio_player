@@ -61,10 +61,25 @@ const loadSong = song => {
     image.src = `img/${song.name}.jpg`;
 }
 
+// Current Song
+let songIndex = 0;
 
+// Previous Song
+const prevSong = () => {
+    songIndex--;
+    loadSong(songs[songIndex]);
+    playSong();
+}
+
+// Next Song
+const nextSong = () => {
+    songIndex++;
+    loadSong(songs[songIndex]);
+    playSong();
+}
 
 // On Load - Select First Song
-loadSong(songs[0]);
+loadSong(songs[songIndex]);
 
 // Event Listeners
 prevBtn.addEventListener('click', prevSong);
