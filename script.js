@@ -128,8 +128,11 @@ const updateProgressBar = e => {
 
 // Set Progress Bar
 const setProgressBar = e => {
-    const width = this.clientWidth;
+    console.log(e);
+    const width = e.srcElement.clientWidth;
+    console.log(width);
     const clickX = e.offsetX;
+    console.log(clickX);
     const { duration } = music;
     music.currentTime = (clickX / width) * duration;
 }
