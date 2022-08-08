@@ -67,6 +67,11 @@ let songIndex = 0;
 // Previous Song
 const prevSong = () => {
     songIndex--;
+
+    if (songIndex < 0) {
+        songIndex = songs.length - 1;
+    }
+
     loadSong(songs[songIndex]);
     playSong();
 }
@@ -74,6 +79,11 @@ const prevSong = () => {
 // Next Song
 const nextSong = () => {
     songIndex++;
+
+    if (songIndex > songs.length -1) {
+        songIndex = 0;
+    }
+    
     loadSong(songs[songIndex]);
     playSong();
 }
